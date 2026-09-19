@@ -17,10 +17,10 @@
 
 Listen to the audio summary for this section:
 
-- [▶ Play / listen to the audio summary](voiceover/01-why-this-chunk-exists.mp3)
+- [▶ Open the audio player page](voiceover/01-why-this-chunk-exists.html)
 - [⬇ Download the MP3](voiceover/01-why-this-chunk-exists.mp3)
 
-GitHub sometimes does not render embedded audio inline in markdown previews, so the direct link above is the most reliable playback option.
+This page opens a small HTML audio player that works reliably in a browser, rather than depending on GitHub's markdown audio preview support.
 
 The rest of the system makes one promise: **every value points to the exact sentence it came from.** That promise is kept or broken here, before any model is involved.
 
