@@ -25,6 +25,8 @@ So this chunk has a narrow job and a high bar:
 2. Lose nothing.
 3. Produce **one canonical shape** — ordered pages, text, images, and clause-level segments with exact coordinates — that every later stage consumes without caring whether the source was a Word file or a fax.
 
+<img width="2816" height="1536" alt="Gemini_Generated_Image_uamz1yuamz1yuamz" src="https://github.com/user-attachments/assets/9a931b6f-7421-4a2b-8adc-480402c21324" />
+
 ---
 
 ## 2. Scope
