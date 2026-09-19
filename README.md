@@ -48,7 +48,7 @@ The system is decomposed into seven parts. Each chunk gets its own **high-level 
 
 | # | Chunk | What it does | The hard problem in it |
 |---|---|---|---|
-| **01** | **Ingest, normalise & segment** | Accept PDF, Word and scans. Run OCR, render pages, and split documents into sections and clauses, keeping page and coordinates for each. | Pages in must equal pages out. The failures that hurt are the ones no API reports. |
+| **01** | [**Ingest, normalise & segment**](docs/prd/Chunk%2001%20%C2%B7%20Ingest,%20normalise%20&%20segment.md) | Accept PDF, Word and scans. Run OCR, render pages, and split documents into sections and clauses, keeping page and coordinates for each. | Pages in must equal pages out. The failures that hurt are the ones no API reports. |
 | **02** | **Relevance screen & clause routing** | A cheap, recall-first screen discards the noise. Surviving clauses are routed to entitlement families (vacation, sick, bereavement…) with synonyms and regional terms resolved. | Dropping the one clause that matters is the costliest failure in the system. |
 | **03** | **Evidence-grounded extraction & gap detection** | Structured output against the entitlement schema. Every value carries a source span. No span means `not_stated`. Missing required fields become gaps, and disagreements become conflicts. | Absence as a first-class output. Citation verified by deterministic code, not by trusting the model. |
 | **04** | **Evaluation harness** | Golden sets built from past implementations. Measures field accuracy, **unsupported-value rate**, **gap recall** and calibration. Gates every change. | What was configured isn't always what the document said. |
@@ -78,7 +78,7 @@ Question ──► 7 chunks ──► PRD ──► HLD per chunk ──► LLD 
 
 | Chunk | HLD | LLD | Code | Tests / Eval |
 |---|:-:|:-:|:-:|:-:|
-| 01 Ingest, normalise & segment | ✅ | ✅ | ⬜ | ⬜ |
+| [01 Ingest, normalise & segment](docs/prd/Chunk%2001%20%C2%B7%20Ingest,%20normalise%20&%20segment.md) | ✅ | ✅ | ⬜ | ⬜ |
 | 02 Relevance screen & routing | ⬜ | ⬜ | ⬜ | ⬜ |
 | 03 Cited extraction & gaps | ⬜ | ⬜ | ⬜ | ⬜ |
 | 04 Evaluation harness | ⬜ | ⬜ | ⬜ | ⬜ |
