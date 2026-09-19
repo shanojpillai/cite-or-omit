@@ -56,19 +56,7 @@ The system is decomposed into seven parts. Each chunk gets its own **high-level 
 | **06** | **Schema, lexicon & rule packs** | A versioned entitlement schema, a synonym lexicon per region, required-field rules and prompts, all as configuration gated by the harness in CI. | A new region or leave type should be a config change, not a release. |
 | **07** | **Infra, scale & failure** | ~600 pages per domain, ~7K pages per customer, processed as batch. Stateless workers sit behind a model gateway. Runs are idempotent and resumable, with full lineage audit. | The bottleneck is model throughput, not pods. |
 
-```mermaid
-flowchart LR
-  A[01 Ingest &<br/>segment] --> B[02 Relevance screen<br/>& routing]
-  B --> C[03 Cited extraction<br/>& gap detection]
-  C --> D[05 Consultant review<br/>& approval]
-  D --> E[(Approved<br/>requirements)]
-  F[06 Schema · lexicon<br/>· rule packs] -.-> B
-  F -.-> C
-  G[04 Evaluation<br/>harness] -.gates.-> F
-  G -.gates.-> C
-  H[07 Infra · scale · failure] -.-> A
-  H -.-> C
-```
+<img width="3654" height="1182" alt="readme01" src="https://github.com/user-attachments/assets/f0e45e2e-5bc4-463b-bca0-aa3ba8e9e571" />
 
 ---
 
