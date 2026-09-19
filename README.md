@@ -69,16 +69,16 @@ Question ──► 7 chunks ──► PRD ──► HLD per chunk ──► LLD 
 | Stage | Output | Status |
 |---|---|---|
 | 0 · Question & decomposition | This README, the seven chunks | ✅ Done |
-| 1 · Product requirements | [`docs/prd/`](docs/prd/): full PRD plus a voice-over per section | ✅ Draft v0.4 |
-| 2 · High-level design | [`docs/hld/`](docs/hld/): one design per chunk | ⏳ In progress |
-| 3 · Low-level design | [`docs/lld/`](docs/lld/): one design per chunk | ⬜ Not started |
+| 1 · Product requirements | [`docs/prd/`](docs/prd/): PRD draft plus stage 01 design notes | ✅ In progress |
+| 2 · High-level design | [`docs/hld/`](docs/hld/): one design per chunk | ⏳ Planned |
+| 3 · Low-level design | [`docs/lld/`](docs/lld/): one design per chunk | ⏳ Planned |
 | 4 · Implementation | [`src/`](src/): the running application | ⬜ Not started |
 
 ### Chunk progress
 
 | Chunk | HLD | LLD | Code | Tests / Eval |
 |---|:-:|:-:|:-:|:-:|
-| 01 Ingest, normalise & segment | ⬜ | ⬜ | ⬜ | ⬜ |
+| 01 Ingest, normalise & segment | ✅ | ✅ | ⬜ | ⬜ |
 | 02 Relevance screen & routing | ⬜ | ⬜ | ⬜ | ⬜ |
 | 03 Cited extraction & gaps | ⬜ | ⬜ | ⬜ | ⬜ |
 | 04 Evaluation harness | ⬜ | ⬜ | ⬜ | ⬜ |
@@ -92,29 +92,25 @@ Question ──► 7 chunks ──► PRD ──► HLD per chunk ──► LLD 
 
 ```
 cite-or-omit/
-├── README.md                     ← you are here
+├── README.md                               ← you are here
+├── LICENSE                                 ← all-rights-reserved notice
 ├── docs/
-│   ├── question.md               ← the original problem statement
-│   ├── chunks.md                 ← the seven-chunk decomposition
 │   ├── prd/
-│   │   ├── PRD.md                ← full product requirements
-│   │   └── voiceover/            ← one spoken walkthrough per PRD section
-│   │       ├── 01-why-were-here.md
-│   │       └── …
-│   ├── hld/
-│   │   ├── 00-system-overview.md
-│   │   ├── 01-ingest.md
-│   │   └── …                     ← 02 → 07
-│   ├── lld/
-│   │   ├── 01-ingest.md
-│   │   └── …                     ← 02 → 07
-│   └── decisions/                ← ADRs: one file per significant trade-off
+│   │   ├── PRD.md                          ← product requirements draft
+│   │   ├── "Chunk 01 · Ingest, normalise & segment.md"
+│   │   └── "Chunk 01 · Ingest, normalise & segment — Low-Level Design.md"
+│   ├── hld/                                ← planned: one HLD per chunk
+│   ├── lld/                                ← planned: one LLD per chunk
+│   ├── decisions/                          ← planned: ADRs and trade-offs
+│   └── voiceover/                          ← planned: spoken walkthroughs
 ├── diagrams/
-│   ├── mermaid/                  ← source of truth, renders on GitHub
-│   └── excalidraw/               ← hand-redrawn versions (.excalidraw + .png)
-├── src/                          ← application code (stage 4)
-├── eval/                         ← golden-set format, harness, results
-└── samples/                      ← synthetic policy documents only
+│   ├── mermaid/                            ← source of truth, renders on GitHub
+│   └── excalidraw/                         ← hand-redrawn versions (.excalidraw + .png)
+├── src/                                    ← application code (stage 4)
+├── eval/                                   ← golden-set format, harness, results
+├── samples/                                ← synthetic policy documents only
+├── .gitignore
+└── .github/                                ← optional repo metadata and automation
 ```
 
 ---
