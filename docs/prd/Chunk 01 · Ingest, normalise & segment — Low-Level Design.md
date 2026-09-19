@@ -17,7 +17,6 @@
 Numbers marked **[EST]** are engineering estimates to confirm with real documents in phase 0.
 
 ---
-
 ## 1. Re-evaluation of the HLD
 
 I read HLD v1.0 as a hostile reviewer would. It was right about the core: clause-level segmentation, rendering DOCX to PDF, keeping page images, two invariants. But it was written as if every file is honest, every run succeeds once, and one pipeline version lives forever. Production breaks all three assumptions.
