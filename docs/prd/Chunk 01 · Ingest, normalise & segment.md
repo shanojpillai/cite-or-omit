@@ -340,23 +340,8 @@ Register a loader. Dispatch is keyed by detected type, so nothing existing is to
 
 ---
 
-## 14. Say it aloud — the 90-second version
 
-> "Ingest exists for one reason: every citation downstream is only as good as the coordinates recorded here.
->
-> The consultant uploads the whole pile — Word, PDFs, scans. I hash each file so duplicates cost nothing, check type and size up front so I fail before I pay, then render everything to pages. Word files get rendered to PDF first, so 'page 31' means the same thing to the system, the consultant and the customer.
->
-> Text comes from the native layer when it's healthy, OCR when it isn't — decided per page, with confidence recorded.
->
-> Then I segment by the document's own structure — headings, numbered clauses, tables — never fixed-size chunks, because a chunk boundary can cut an accrual rate from its unit. Every segment carries page, character offsets and a bounding box.
->
-> Two invariants are enforced in code. Pages in equal pages out, because a lost page doesn't error — it just becomes a rule we wrongly report as missing. And every anchor round-trips to its exact text, because a wrong highlight is worse than no highlight.
->
-> The output is one canonical shape. Nothing downstream ever cares what format the customer sent."
-
----
-
-## 15. Open questions
+## 14. Open questions
 
 | # | Question | Blocks |
 |---|---|---|
