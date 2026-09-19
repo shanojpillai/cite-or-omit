@@ -15,6 +15,13 @@
 
 ## 1. Why this chunk exists
 
+Listen to the audio summary for this section:
+
+<audio controls preload="metadata">
+  <source src="voiceover/01-why-this-chunk-exists.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+
 The rest of the system makes one promise: **every value points to the exact sentence it came from.** That promise is kept or broken here, before any model is involved.
 
 If ingest drops a page, the extractor can't cite it. If ingest records the wrong position for a sentence, the reviewer sees the wrong highlight — and **a wrong highlight is worse than no highlight**, because it looks like evidence. If ingest splits a clause in half, the extractor sees "accrues at 1.54 hours" in one piece and "per bi-weekly pay period" in another.
