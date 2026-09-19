@@ -16,7 +16,6 @@ Turning customer time-off policy documents into cited, reviewable entitlement re
 > **Context.** This is a practice PRD written for system-design preparation. It describes a generic HCM vendor's Services organisation; it is not an official document of any company. Figures tagged `ASSUMPTION` are working hypotheses to validate in discovery before this PRD is approved.
 
 ## 01. TL;DR
-[TLDR.mp3](https://github.com/user-attachments/files/32417807/TLDR.mp3)
 
 Implementation consultants spend a large share of every implementation reading customer handbooks and policy documents to work out what time off the customer gives its employees. They then write those rules up as business requirements that drive entitlement configuration. The work is slow and repetitive, its quality depends on who does it, and nothing traces a requirement back to the document it came from. When a clause is misread, the error surfaces weeks later as a wrong balance on an employee's pay stub.
 
