@@ -142,7 +142,6 @@ flowchart LR
   class OBJ,PG,OUT store
   class OCR,NEXT ext
 ```
-*Source: `diagrams/mermaid/01-ingest/01a-component-architecture.mmd`*
 
 ### 3.1 Services
 
@@ -317,8 +316,6 @@ flowchart TB
   class RW warn
   class QUAR,NEED,REJ,FAIL,READY stop
 ```
-*Source: `diagrams/mermaid/01-ingest/01d-pipeline-low-level.mmd`*
-
 Every stage follows the same contract:
 
 ```
@@ -431,8 +428,6 @@ flowchart TB
   class N,NATIVE,OCR,OCRD,RAW,C1,C2,C3,C4,C5,MAP step
   class EMPTY,UNR,OUT,F out
 ```
-*Source: `diagrams/mermaid/01-ingest/01e-page-text-canonicalisation.mmd`*
-
 **Native first.** Extract characters with their unicode value, box, font name and size.
 
 **Health check** (all must pass to use native text):
@@ -558,8 +553,6 @@ flowchart TB
   class HN,LV,PUSH,HS,MERGE,NEW,SPLIT,XR,TW,TS,FN,FG,ID,ANC,MB step
   class FAIL,OK out
 ```
-*Source: `diagrams/mermaid/01-ingest/01f-segmentation.mmd`*
-
 **Heading detection.** A block is a heading if the layout model says so **or** it matches a numbering pattern and is short (< 120 chars) with no terminal full stop.
 
 | Pattern | Example | Level rule |
@@ -650,8 +643,6 @@ stateDiagram-v2
   CONTAINER_DONE --> [*]
   MANUAL --> [*]
 ```
-*Source: `diagrams/mermaid/01-ingest/01c-document-state-machine.mmd`*
-
 ---
 
 ## 5. Data model
@@ -681,7 +672,7 @@ erDiagram
     uuid project_id FK
     uuid parent_doc_id FK
     char64 content_hash
-    text source_filename
+    text _filename
     text detected_type
     text state
     uuid current_run_id FK
@@ -707,7 +698,7 @@ erDiagram
   PAGE {
     uuid run_id FK
     int page_no
-    text text_source
+    text text_
     real ocr_confidence
     text flag
     text image_key
@@ -745,8 +736,6 @@ erDiagram
     text decision
   }
 ```
-*Source: `diagrams/mermaid/01-ingest/01g-data-model.mmd`*
-
 ### 5.1 DDL (core tables)
 
 ```sql
@@ -996,8 +985,6 @@ sequenceDiagram
   ORC-->>UI: SSE document.state_changed per transition
   Note over UI: Each document shows its own progress. Others keep flowing if one fails.
 ```
-*Source: `diagrams/mermaid/01-ingest/01b-upload-sequence.mmd`*
-
 - The browser computes SHA-256 in a Web Worker (streaming, so a 300 MB file doesn't block the UI).
 - Parts of 8 MB, 4 in parallel, each retried up to 5 times. Completed part ETags are kept in memory, so a dropped connection resumes from the last good part.
 
