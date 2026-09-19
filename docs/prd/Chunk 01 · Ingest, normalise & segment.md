@@ -17,6 +17,8 @@
 
 Listen to the audio summary for this section:
 
+[▶ Play / listen to the audio summary](voiceover/01-why-this-chunk-exists.mp3)
+
 <audio controls preload="metadata">
   <source src="voiceover/01-why-this-chunk-exists.mp3" type="audio/mpeg">
   Your browser does not support the audio element.
