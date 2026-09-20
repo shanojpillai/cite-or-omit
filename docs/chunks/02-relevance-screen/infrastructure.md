@@ -13,6 +13,8 @@
 
 ## 1. The picture
 
+<img width="2816" height="1536" alt="Gemini_Generated_Image_ns72cyns72cyns72" src="https://github.com/user-attachments/assets/37a6e9c8-17eb-4f2a-9a94-ea5025183336" />
+
 ```
    [EventBridge]  document.ready/v1 from chunk 01
         │
