@@ -14,9 +14,10 @@
 
 1. [High-level design](hld.md): scope, canonical contract, flow, invariants and trade-offs.
 2. [Patterns](patterns.md): the architecture, design and reliability patterns behind the HLD.
-3. [Low-level design](lld.md): stages, data model, APIs, reliability, security and tests.
+3. [Low-level design](lld.md): stages, data model, APIs, reliability, security and core test contract.
 4. [Infrastructure](infrastructure.md): AWS topology, workflow, storage, networking, IAM and deployment boundaries.
-5. `operations.md`: reserved for CI/CD, environments, dashboards, runbooks and disaster recovery procedures.
+5. [Test and evaluation](test-and-evaluation.md): test pyramid, ingest-quality metrics, labelled data and release gates.
+6. [CI/CD](ci-cd.md): build, promotion, deployment safety, rollback and environment gates.
 
 ## Boundary
 
@@ -38,4 +39,5 @@ This chunk owns intake, safety checks, normalisation, rendering, text extraction
 | Patterns and rationale | [Patterns](patterns.md) |
 | Build specification | [LLD](lld.md) |
 | AWS deployment | [Infrastructure](infrastructure.md) |
-| Runtime operations | `operations.md` (planned) |
+| Testing and evaluation | [Test and evaluation](test-and-evaluation.md) |
+| CI/CD and release operations | [CI/CD](ci-cd.md) |

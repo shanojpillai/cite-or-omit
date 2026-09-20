@@ -9,7 +9,7 @@
 | **Builds on** | [HLD](hld.md) · [Patterns](patterns.md) · [LLD](lld.md) |
 | **Region** | `ca-central-1` primary · `ca-west-1` for disaster recovery |
 | **IaC** | AWS CDK (Python) |
-| **Next** | Ops, CI/CD, environments (separate document) |
+| **Related** | [Test and evaluation](test-and-evaluation.md) · [CI/CD](ci-cd.md) |
 
 Items tagged **[EST]** are estimates. Items tagged **[VERIFY]** are AWS facts I confirmed from public sources at the time of writing; re-check them in the AWS console, because quotas and prices change.
 
@@ -593,7 +593,7 @@ Splitting stateful from stateless means a bad compute deploy can be rolled back 
 | `coo-prod-us` | Production, US cell (when needed) | |
 | `coo-security`, `coo-logs` | Org-level security tooling and log archive | Control Tower landing zone |
 
-CI/CD, promotion rules and runbooks come in the next document (ops).
+CI/CD, promotion rules and runbooks are defined in [CI/CD](ci-cd.md). Test gates and quality metrics are defined in [Test and evaluation](test-and-evaluation.md).
 
 ---
 

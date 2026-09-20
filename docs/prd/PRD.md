@@ -22,6 +22,8 @@ Turning customer time-off policy documents into cited, reviewable entitlement re
 - [Chunk 01 documentation](../chunks/01-ingest/README.md)
 - [Chunk 01 · HLD](../chunks/01-ingest/hld.md)
 - [Chunk 01 · LLD](../chunks/01-ingest/lld.md)
+- [Chunk 01 · Test and evaluation](../chunks/01-ingest/test-and-evaluation.md)
+- [Chunk 01 · CI/CD](../chunks/01-ingest/ci-cd.md)
 
 ## Related design documents
 
@@ -30,6 +32,8 @@ This PRD is the parent artifact for the chunk-level implementation design. Use t
 - [Chunk 01 · Ingest, normalise & segment](../chunks/01-ingest/hld.md)
 - [Chunk 01 · Ingest — Architecture & Design Patterns](../chunks/01-ingest/patterns.md)
 - [Chunk 01 · Ingest, normalise & segment — Low-Level Design](../chunks/01-ingest/lld.md)
+- [Chunk 01 · Ingest — Test and Evaluation](../chunks/01-ingest/test-and-evaluation.md)
+- [Chunk 01 · Ingest — CI/CD](../chunks/01-ingest/ci-cd.md)
 
 ## 01. TL;DR
 

@@ -9,6 +9,7 @@
 | **Supersedes** | Nothing. Amends HLD v1.0 (§1 below) |
 | **PRD requirements** | FR-ING-01 → 05 · FR-AUD-01, 02 · NFR throughput, security, privacy |
 | **Frontend** | React review workspace (upload, document list, page viewer) |
+| **Related** | [Test and evaluation](test-and-evaluation.md) · [CI/CD](ci-cd.md) |
 | **Status** | HLD ✅ · LLD ✅ · Code ⬜ |
 
 **How to read this:** §1 is the re-evaluation of the HLD. §2 is the catalogue of real-world scenarios the design must survive. §3–§9 are the build spec. §10–§15 are what makes it production: security, observability, capacity, testing, config and runbook.
@@ -1118,6 +1119,8 @@ Events carry an `id`. On reconnect the browser sends `Last-Event-ID` and the ser
 ---
 
 ## 13. Testing
+
+The detailed test and evaluation plan is maintained in [Test and evaluation](test-and-evaluation.md). This section remains the build-level test contract; the linked document defines the quality metrics, labelled data, thresholds and release gates.
 
 | Layer | What | How |
 |---|---|---|

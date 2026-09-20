@@ -71,7 +71,7 @@ The system is decomposed into seven parts. Each chunk gets its own **high-level 
 ## The journey
 
 ```
-Question ──► 7 chunks ──► PRD ──► HLD per chunk ──► LLD per chunk ──► Future implementation
+Question ──► 7 chunks ──► PRD ──► HLD ──► Patterns ──► LLD ──► Infrastructure ──► Test & eval ──► CI/CD
 ```
 
 | Stage | Output | Status |
@@ -79,20 +79,24 @@ Question ──► 7 chunks ──► PRD ──► HLD per chunk ──► LLD 
 | 0 · Question & decomposition | This README, the seven chunks | ✅ Done |
 | 1 · Product requirements | [`docs/prd/`](docs/prd/): PRD draft and chunk requirements | ✅ In progress |
 | 2 · High-level design | [`docs/chunks/`](docs/chunks/): one package per chunk | ✅ Chunk 01 |
-| 3 · Low-level design | [`docs/chunks/`](docs/chunks/): one package per chunk | ✅ Chunk 01 |
-| 4 · Implementation | Future phase outside this documentation workspace | ⬜ Not started |
+| 3 · Patterns and rationale | [`docs/chunks/`](docs/chunks/): one package per chunk | ✅ Chunk 01 |
+| 4 · Low-level design | [`docs/chunks/`](docs/chunks/): one package per chunk | ✅ Chunk 01 |
+| 5 · Infrastructure | [`docs/chunks/`](docs/chunks/): one package per chunk | ✅ Chunk 01 |
+| 6 · Test and evaluation | [`docs/chunks/`](docs/chunks/): one package per chunk | ✅ Chunk 01 |
+| 7 · CI/CD | [`docs/chunks/`](docs/chunks/): one package per chunk | ✅ Chunk 01 |
+| 8 · Implementation | Future phase outside this documentation workspace | ⬜ Not started |
 
 ### Chunk progress
 
-| Chunk | HLD | LLD | Code | Tests / Eval |
-|---|:-:|:-:|:-:|:-:|
-| [01 Ingest, normalise & segment](docs/chunks/01-ingest/README.md) | ✅ | ✅ | ⬜ | ⬜ |
-| 02 Relevance screen & routing | ⬜ | ⬜ | ⬜ | ⬜ |
-| 03 Cited extraction & gaps | ⬜ | ⬜ | ⬜ | ⬜ |
-| 04 Evaluation harness | ⬜ | ⬜ | ⬜ | ⬜ |
-| 05 Review & approval workspace | ⬜ | ⬜ | ⬜ | ⬜ |
-| 06 Schema, lexicon & rule packs | ⬜ | ⬜ | ⬜ | ⬜ |
-| 07 Infra, scale & failure | ⬜ | ⬜ | ⬜ | ⬜ |
+| Chunk | HLD | LLD | Infra | Test / Eval | CI/CD | Code |
+|---|:-:|:-:|:-:|:-:|:-:|:-:|
+| [01 Ingest, normalise & segment](docs/chunks/01-ingest/README.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ⬜ |
+| 02 Relevance screen & routing | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
+| 03 Cited extraction & gaps | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
+| 04 Evaluation harness | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
+| 05 Review & approval workspace | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
+| 06 Schema, lexicon & rule packs | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
+| 07 Infra, scale & failure | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
 
 ---
 
@@ -112,7 +116,8 @@ cite-or-omit/
 │   │       ├── patterns.md                 ← patterns and rationale
 │   │       ├── lld.md                      ← low-level design
 │   │       ├── infrastructure.md          ← deployment design
-│   │       └── operations.md               ← planned operations guide
+│   │       ├── test-and-evaluation.md     ← testing and quality evaluation
+│   │       └── ci-cd.md                   ← release and deployment controls
 └── .gitignore
 ```
 
