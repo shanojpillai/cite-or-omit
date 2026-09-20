@@ -19,15 +19,17 @@ Turning customer time-off policy documents into cited, reviewable entitlement re
 
 - [Repository home](../../README.md)
 - [PRD overview](#)
-- [Chunk 01 · Ingest, normalise & segment](Chunk%2001%20%C2%B7%20Ingest,%20normalise%20&%20segment.md)
-- [Chunk 01 · LLD](Chunk%2001%20%C2%B7%20Ingest,%20normalise%20&%20segment%20%E2%80%94%20Low-Level%20Design.md)
+- [Chunk 01 · Ingest, normalise & segment](../hld/Chunk%2001%20%C2%B7%20Ingest,%20normalise%20%26%20segment.md)
+- [Chunk 01 · HLD](../hld/Chunk%2001%20%C2%B7%20Ingest%20%E2%80%94%20Architecture%20%26%20Design%20Patterns.md)
+- [Chunk 01 · LLD](../lld/Chunk%2001%20%C2%B7%20Ingest,%20normalise%20%26%20segment%20%E2%80%94%20Low-Level%20Design.md)
 
 ## Related design documents
 
 This PRD is the parent artifact for the chunk-level implementation design. Use the links below to move from the end-to-end requirements into the detailed design for the first operational slice:
 
-- [Chunk 01 · Ingest, normalise & segment](Chunk%2001%20%C2%B7%20Ingest,%20normalise%20&%20segment.md)
-- [Chunk 01 · Ingest, normalise & segment — Low-Level Design](Chunk%2001%20%C2%B7%20Ingest,%20normalise%20&%20segment%20%E2%80%94%20Low-Level%20Design.md)
+- [Chunk 01 · Ingest, normalise & segment](../hld/Chunk%2001%20%C2%B7%20Ingest,%20normalise%20%26%20segment.md)
+- [Chunk 01 · Ingest — Architecture & Design Patterns](../hld/Chunk%2001%20%C2%B7%20Ingest%20%E2%80%94%20Architecture%20%26%20Design%20Patterns.md)
+- [Chunk 01 · Ingest, normalise & segment — Low-Level Design](../lld/Chunk%2001%20%C2%B7%20Ingest,%20normalise%20%26%20segment%20%E2%80%94%20Low-Level%20Design.md)
 
 ## 01. TL;DR
 

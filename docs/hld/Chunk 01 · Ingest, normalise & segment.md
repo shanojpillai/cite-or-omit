@@ -9,15 +9,16 @@
 | **PRD requirements** | FR-ING-01 → FR-ING-05 |
 | **Upstream** | Consultant upload (review workspace) |
 | **Downstream** | Chunk 02 — Relevance screen & routing |
-| **Status** | Deep dive ✅ · HLD diagram ⏳ · LLD ⬜ · Code ⬜ |
+| **Status** | HLD ✅ · LLD ✅ · Code ⬜ |
 
 ## Quick navigation
 
 - [Repository home](../../README.md)
-- [PRD](PRD.md)
-- [Chunk 01 overview](#)
-- [Chunk 01 LLD](Chunk%2001%20%C2%B7%20Ingest,%20normalise%20&%20segment%20%E2%80%94%20Low-Level%20Design.md)
-- [Audio summary](voiceover/01-why-this-chunk-exists.html)
+- [PRD](../prd/PRD.md)
+- [Chunk 01 HLD](#)
+- [Architecture and design patterns](Chunk%2001%20%C2%B7%20Ingest%20%E2%80%94%20Architecture%20%26%20Design%20Patterns.md)
+- [Chunk 01 LLD](../lld/Chunk%2001%20%C2%B7%20Ingest,%20normalise%20%26%20segment%20%E2%80%94%20Low-Level%20Design.md)
+- [Audio summary](../voiceover/01-why-this-chunk-exists.html)
 
 ---
 
@@ -25,8 +26,8 @@
 
 Listen to the audio summary for this section:
 
-- [▶ Open the audio player page](voiceover/01-why-this-chunk-exists.html)
-- [⬇ Download the MP3](voiceover/01-why-this-chunk-exists.mp3)
+- [▶ Open the audio player page](../voiceover/01-why-this-chunk-exists.html)
+- [⬇ Download the MP3](../voiceover/01-why-this-chunk-exists.mp3)
 
 This page opens a small HTML audio player that works reliably in a browser, rather than depending on GitHub's markdown audio preview support.
 

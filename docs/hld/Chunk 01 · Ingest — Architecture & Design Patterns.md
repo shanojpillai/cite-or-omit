@@ -6,7 +6,7 @@
 | | |
 |---|---|
 | **Chunk** | 01 of 07 · Ingest, normalise & segment |
-| **Companion to** | [HLD](../hld/01-ingest.md) · [LLD](../lld/01-ingest.md) |
+| **Companion to** | [HLD](Chunk%2001%20%C2%B7%20Ingest,%20normalise%20%26%20segment.md) · [LLD](../lld/Chunk%2001%20%C2%B7%20Ingest,%20normalise%20%26%20segment%20%E2%80%94%20Low-Level%20Design.md) |
 | **Diagrams** | `diagrams/mermaid/01-ingest/01h-pattern-map.mmd` · `01i-stage-class-diagram.mmd` |
 | **Status** | ✅ v1.0 |
 

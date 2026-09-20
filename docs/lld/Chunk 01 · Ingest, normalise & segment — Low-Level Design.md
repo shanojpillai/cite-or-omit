@@ -19,8 +19,8 @@ Numbers marked **[EST]** are engineering estimates to confirm with real document
 ## Quick navigation
 
 - [Repository home](../../README.md)
-- [PRD](PRD.md)
-- [Chunk 01 overview](Chunk%2001%20%C2%B7%20Ingest,%20normalise%20&%20segment.md)
+- [PRD](../prd/PRD.md)
+- [Chunk 01 HLD](../hld/Chunk%2001%20%C2%B7%20Ingest,%20normalise%20%26%20segment.md)
 - [Chunk 01 LLD](#)
 
 ---

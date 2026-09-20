@@ -11,8 +11,9 @@ The goal is depth, not coverage. One real-world problem, taken all the way down.
 
 - [Repository home](#)
 - [PRD](docs/prd/PRD.md)
-- [Chunk 01: Ingest, normalise & segment](docs/prd/Chunk%2001%20%C2%B7%20Ingest,%20normalise%20&%20segment.md)
-- [Chunk 01 LLD](docs/prd/Chunk%2001%20%C2%B7%20Ingest,%20normalise%20&%20segment%20%E2%80%94%20Low-Level%20Design.md)
+- [Chunk 01: Ingest, normalise & segment](docs/hld/Chunk%2001%20%C2%B7%20Ingest,%20normalise%20%26%20segment.md)
+- [Chunk 01 HLD](docs/hld/Chunk%2001%20%C2%B7%20Ingest%20%E2%80%94%20Architecture%20%26%20Design%20Patterns.md)
+- [Chunk 01 LLD](docs/lld/Chunk%2001%20%C2%B7%20Ingest,%20normalise%20%26%20segment%20%E2%80%94%20Low-Level%20Design.md)
 
 ---
 
@@ -55,7 +56,7 @@ The system is decomposed into seven parts. Each chunk gets its own **high-level 
 
 | # | Chunk | What it does | The hard problem in it |
 |---|---|---|---|
-| **01** | [**Ingest, normalise & segment**](docs/prd/Chunk%2001%20%C2%B7%20Ingest,%20normalise%20&%20segment.md) | Accept PDF, Word and scans. Run OCR, render pages, and split documents into sections and clauses, keeping page and coordinates for each. | Pages in must equal pages out. The failures that hurt are the ones no API reports. |
+| **01** | [**Ingest, normalise & segment**](docs/hld/Chunk%2001%20%C2%B7%20Ingest,%20normalise%20%26%20segment.md) | Accept PDF, Word and scans. Run OCR, render pages, and split documents into sections and clauses, keeping page and coordinates for each. | Pages in must equal pages out. The failures that hurt are the ones no API reports. |
 | **02** | **Relevance screen & clause routing** | A cheap, recall-first screen discards the noise. Surviving clauses are routed to entitlement families (vacation, sick, bereavement…) with synonyms and regional terms resolved. | Dropping the one clause that matters is the costliest failure in the system. |
 | **03** | **Evidence-grounded extraction & gap detection** | Structured output against the entitlement schema. Every value carries a source span. No span means `not_stated`. Missing required fields become gaps, and disagreements become conflicts. | Absence as a first-class output. Citation verified by deterministic code, not by trusting the model. |
 | **04** | **Evaluation harness** | Golden sets built from past implementations. Measures field accuracy, **unsupported-value rate**, **gap recall** and calibration. Gates every change. | What was configured isn't always what the document said. |
@@ -76,16 +77,16 @@ Question ──► 7 chunks ──► PRD ──► HLD per chunk ──► LLD 
 | Stage | Output | Status |
 |---|---|---|
 | 0 · Question & decomposition | This README, the seven chunks | ✅ Done |
-| 1 · Product requirements | [`docs/prd/`](docs/prd/): PRD draft plus stage 01 design notes | ✅ In progress |
-| 2 · High-level design | [`docs/hld/`](docs/hld/): one design per chunk | ⏳ Planned |
-| 3 · Low-level design | [`docs/lld/`](docs/lld/): one design per chunk | ⏳ Planned |
+| 1 · Product requirements | [`docs/prd/`](docs/prd/): PRD draft and chunk requirements | ✅ In progress |
+| 2 · High-level design | [`docs/hld/`](docs/hld/): one design per chunk | ✅ Chunk 01 |
+| 3 · Low-level design | [`docs/lld/`](docs/lld/): one design per chunk | ✅ Chunk 01 |
 | 4 · Implementation | [`src/`](src/): the running application | ⬜ Not started |
 
 ### Chunk progress
 
 | Chunk | HLD | LLD | Code | Tests / Eval |
 |---|:-:|:-:|:-:|:-:|
-| [01 Ingest, normalise & segment](docs/prd/Chunk%2001%20%C2%B7%20Ingest,%20normalise%20&%20segment.md) | ✅ | ✅ | ⬜ | ⬜ |
+| [01 Ingest, normalise & segment](docs/hld/Chunk%2001%20%C2%B7%20Ingest,%20normalise%20%26%20segment.md) | ✅ | ✅ | ⬜ | ⬜ |
 | 02 Relevance screen & routing | ⬜ | ⬜ | ⬜ | ⬜ |
 | 03 Cited extraction & gaps | ⬜ | ⬜ | ⬜ | ⬜ |
 | 04 Evaluation harness | ⬜ | ⬜ | ⬜ | ⬜ |
@@ -104,12 +105,13 @@ cite-or-omit/
 ├── docs/
 │   ├── prd/
 │   │   ├── PRD.md                          ← product requirements draft
+│   ├── hld/                                ← one HLD per chunk plus supporting notes
 │   │   ├── "Chunk 01 · Ingest, normalise & segment.md"
+│   │   └── "Chunk 01 · Ingest — Architecture & Design Patterns.md"
+│   ├── lld/                                ← one LLD per chunk
 │   │   └── "Chunk 01 · Ingest, normalise & segment — Low-Level Design.md"
-│   ├── hld/                                ← planned: one HLD per chunk
-│   ├── lld/                                ← planned: one LLD per chunk
 │   ├── decisions/                          ← planned: ADRs and trade-offs
-│   └── voiceover/                          ← planned: spoken walkthroughs
+│   └── voiceover/                          ← spoken walkthroughs
 ├── diagrams/
 │   ├── mermaid/                            ← source of truth, renders on GitHub
 │   └── excalidraw/                         ← hand-redrawn versions (.excalidraw + .png)
@@ -134,7 +136,7 @@ cite-or-omit/
 5. Failure modes and how they're detected
 6. Open questions
 
-**Voice-overs.** Each PRD section has a short spoken script (~60–80 seconds) in `docs/prd/voiceover/`. It explains the section in plain language, with one concrete example, for a listener who has never configured a time-off policy.
+**Voice-overs.** Each PRD section has a short spoken script (~60–80 seconds) in `docs/voiceover/`. It explains the section in plain language, with one concrete example, for a listener who has never configured a time-off policy.
 
 **Decisions.** Any non-obvious choice gets an ADR in `docs/decisions/`: context, options, decision, consequences.
 
