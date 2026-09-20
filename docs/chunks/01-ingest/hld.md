@@ -14,22 +14,14 @@
 ## Quick navigation
 
 - [Repository home](../../README.md)
-- [PRD](../prd/PRD.md)
+- [PRD](../../prd/PRD.md)
 - [Chunk 01 HLD](#)
-- [Architecture and design patterns](Chunk%2001%20%C2%B7%20Ingest%20%E2%80%94%20Architecture%20%26%20Design%20Patterns.md)
-- [Chunk 01 LLD](../lld/Chunk%2001%20%C2%B7%20Ingest,%20normalise%20%26%20segment%20%E2%80%94%20Low-Level%20Design.md)
-- [Audio summary](../voiceover/01-why-this-chunk-exists.html)
+- [Architecture and design patterns](patterns.md)
+- [Chunk 01 LLD](lld.md)
 
 ---
 
 ## 1. Why this chunk exists
-
-Listen to the audio summary for this section:
-
-- [▶ Open the audio player page](../voiceover/01-why-this-chunk-exists.html)
-- [⬇ Download the MP3](../voiceover/01-why-this-chunk-exists.mp3)
-
-This page opens a small HTML audio player that works reliably in a browser, rather than depending on GitHub's markdown audio preview support.
 
 The rest of the system makes one promise: **every value points to the exact sentence it came from.** That promise is kept or broken here, before any model is involved.
 
@@ -164,7 +156,7 @@ When chunk 03 later says *"cap = 120 hours, cited from `hb25:31:006`, chars 1004
 
 ## 5. Numbered flow
 
-> The HLD workflow diagram for this chunk is the next step and will be added as `diagrams/mermaid/01-ingest-flow.mmd`.
+> The workflow is shown inline below so this document remains self-contained.
 
 | # | Step | What happens | Why it's shaped this way |
 |---|---|---|---|
@@ -370,4 +362,4 @@ Register a loader. Dispatch is keyed by detected type, so nothing existing is to
 
 ---
 
-*Next: HLD workflow diagram for this chunk → `diagrams/mermaid/01-ingest-flow.mmd`, then redrawn in Excalidraw.*
+*This HLD is self-contained; its workflow diagrams are embedded above.*

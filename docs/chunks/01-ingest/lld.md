@@ -8,7 +8,6 @@
 | **Document** | LLD v1.0 · chunk 01 of 07 |
 | **Supersedes** | Nothing. Amends HLD v1.0 (§1 below) |
 | **PRD requirements** | FR-ING-01 → 05 · FR-AUD-01, 02 · NFR throughput, security, privacy |
-| **Diagrams** | `diagrams/mermaid/01-ingest/01a` → `01g` (all render-checked) |
 | **Frontend** | React review workspace (upload, document list, page viewer) |
 | **Status** | HLD ✅ · LLD ✅ · Code ⬜ |
 
@@ -19,8 +18,8 @@ Numbers marked **[EST]** are engineering estimates to confirm with real document
 ## Quick navigation
 
 - [Repository home](../../README.md)
-- [PRD](../prd/PRD.md)
-- [Chunk 01 HLD](../hld/Chunk%2001%20%C2%B7%20Ingest,%20normalise%20%26%20segment.md)
+- [PRD](../../prd/PRD.md)
+- [Chunk 01 HLD](hld.md)
 - [Chunk 01 LLD](#)
 
 ---
@@ -1122,7 +1121,7 @@ Events carry an `id`. On reconnect the browser sends `Last-Event-ID` and the ser
 
 | Layer | What | How |
 |---|---|---|
-| **Fixture corpus** | One synthetic document per scenario R1–R20, plus: two-column layout, rotated scan, table spanning pages, broken font encoding, 0-byte file, PDF with 0 pages | `samples/fixtures/ingest/` with expected-output JSON |
+| **Fixture corpus** | One synthetic document per scenario R1–R20, plus: two-column layout, rotated scan, table spanning pages, broken font encoding, 0-byte file, PDF with 0 pages | Planned documentation fixture set with expected-output JSON |
 | **Golden snapshot** | Segments, anchors and warnings for every fixture | CI fails on any diff; intentional changes regenerate with review (enforces I4) |
 | **Property tests** | Canonicalisation + offset map (monotonic, total, round-trip) over random text with ligatures, hyphens and Unicode | Hypothesis |
 | **Invariant tests** | Deliberately corrupt fixtures to trigger each invariant | Unit |

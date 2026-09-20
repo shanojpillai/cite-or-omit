@@ -6,8 +6,7 @@
 | | |
 |---|---|
 | **Chunk** | 01 of 07 · Ingest, normalise & segment |
-| **Companion to** | [HLD](Chunk%2001%20%C2%B7%20Ingest,%20normalise%20%26%20segment.md) · [LLD](../lld/Chunk%2001%20%C2%B7%20Ingest,%20normalise%20%26%20segment%20%E2%80%94%20Low-Level%20Design.md) |
-| **Diagrams** | `diagrams/mermaid/01-ingest/01h-pattern-map.mmd` · `01i-stage-class-diagram.mmd` |
+| **Companion to** | [HLD](hld.md) · [LLD](lld.md) |
 | **Status** | ✅ v1.0 |
 
 **How to read this.** §1 is the map: every pattern, where it lives, one line on why. §2–§5 go pattern by pattern, grouped by level. Each card follows the same shape: **the problem in our domain → the pattern → where it's applied → a concrete example → why this, not the alternative → when not to use it → the line to say in an interview.** §6 lists the gaps this exercise found in the LLD. §7 is the anti-patterns we deliberately avoided. §8 is a selection guide you can reuse on chunks 02–07.
@@ -709,7 +708,7 @@ ok, failed = HEALTHY_NATIVE.evaluate(page)   # failed = ["MaxGarbageRatio(0.05):
 
 **Pattern.** Commit expected outputs for a fixture corpus; CI diffs every build against them; intentional changes are reviewed and re-baselined.
 
-**Where.** `samples/fixtures/ingest/*` → `expected/*.json`. Enforces I4.
+**Where.** The planned Chunk 01 fixture corpus and its expected JSON outputs. Enforces I4.
 
 ---
 

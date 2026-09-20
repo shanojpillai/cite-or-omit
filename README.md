@@ -3,7 +3,7 @@
 > **The model's job is to find and cite, never to fill in.**
 > A value with no source span does not exist. A required rule with no source span becomes a question for the customer.
 
-An AI system design case study, worked end to end: from an open-ended interview question, through a PRD, a high-level design and a low-level design for each part of the system, to a running application.
+An AI system design case study, worked through as documentation: from an open-ended interview question, through a PRD, a high-level design and a low-level design for each part of the system.
 
 The goal is depth, not coverage. One real-world problem, taken all the way down.
 
@@ -11,9 +11,9 @@ The goal is depth, not coverage. One real-world problem, taken all the way down.
 
 - [Repository home](#)
 - [PRD](docs/prd/PRD.md)
-- [Chunk 01: Ingest, normalise & segment](docs/hld/Chunk%2001%20%C2%B7%20Ingest,%20normalise%20%26%20segment.md)
-- [Chunk 01 HLD](docs/hld/Chunk%2001%20%C2%B7%20Ingest%20%E2%80%94%20Architecture%20%26%20Design%20Patterns.md)
-- [Chunk 01 LLD](docs/lld/Chunk%2001%20%C2%B7%20Ingest,%20normalise%20%26%20segment%20%E2%80%94%20Low-Level%20Design.md)
+- [Chunk 01 documentation](docs/chunks/01-ingest/README.md)
+- [Chunk 01 HLD](docs/chunks/01-ingest/hld.md)
+- [Chunk 01 LLD](docs/chunks/01-ingest/lld.md)
 
 ---
 
@@ -52,11 +52,11 @@ Most of that content is noise: the CEO's welcome letter, company values, meeting
 
 ## The seven chunks
 
-The system is decomposed into seven parts. Each chunk gets its own **high-level design**, then its own **low-level design**, then its own **code**.
+The system is decomposed into seven parts. Each chunk gets its own **high-level design**, **patterns**, **low-level design** and **infrastructure design**. Implementation is a future phase.
 
 | # | Chunk | What it does | The hard problem in it |
 |---|---|---|---|
-| **01** | [**Ingest, normalise & segment**](docs/hld/Chunk%2001%20%C2%B7%20Ingest,%20normalise%20%26%20segment.md) | Accept PDF, Word and scans. Run OCR, render pages, and split documents into sections and clauses, keeping page and coordinates for each. | Pages in must equal pages out. The failures that hurt are the ones no API reports. |
+| **01** | [**Ingest, normalise & segment**](docs/chunks/01-ingest/README.md) | Accept PDF, Word and scans. Run OCR, render pages, and split documents into sections and clauses, keeping page and coordinates for each. | Pages in must equal pages out. The failures that hurt are the ones no API reports. |
 | **02** | **Relevance screen & clause routing** | A cheap, recall-first screen discards the noise. Surviving clauses are routed to entitlement families (vacation, sick, bereavement…) with synonyms and regional terms resolved. | Dropping the one clause that matters is the costliest failure in the system. |
 | **03** | **Evidence-grounded extraction & gap detection** | Structured output against the entitlement schema. Every value carries a source span. No span means `not_stated`. Missing required fields become gaps, and disagreements become conflicts. | Absence as a first-class output. Citation verified by deterministic code, not by trusting the model. |
 | **04** | **Evaluation harness** | Golden sets built from past implementations. Measures field accuracy, **unsupported-value rate**, **gap recall** and calibration. Gates every change. | What was configured isn't always what the document said. |
@@ -71,22 +71,22 @@ The system is decomposed into seven parts. Each chunk gets its own **high-level 
 ## The journey
 
 ```
-Question ──► 7 chunks ──► PRD ──► HLD per chunk ──► LLD per chunk ──► Code, end to end
+Question ──► 7 chunks ──► PRD ──► HLD per chunk ──► LLD per chunk ──► Future implementation
 ```
 
 | Stage | Output | Status |
 |---|---|---|
 | 0 · Question & decomposition | This README, the seven chunks | ✅ Done |
 | 1 · Product requirements | [`docs/prd/`](docs/prd/): PRD draft and chunk requirements | ✅ In progress |
-| 2 · High-level design | [`docs/hld/`](docs/hld/): one design per chunk | ✅ Chunk 01 |
-| 3 · Low-level design | [`docs/lld/`](docs/lld/): one design per chunk | ✅ Chunk 01 |
-| 4 · Implementation | [`src/`](src/): the running application | ⬜ Not started |
+| 2 · High-level design | [`docs/chunks/`](docs/chunks/): one package per chunk | ✅ Chunk 01 |
+| 3 · Low-level design | [`docs/chunks/`](docs/chunks/): one package per chunk | ✅ Chunk 01 |
+| 4 · Implementation | Future phase outside this documentation workspace | ⬜ Not started |
 
 ### Chunk progress
 
 | Chunk | HLD | LLD | Code | Tests / Eval |
 |---|:-:|:-:|:-:|:-:|
-| [01 Ingest, normalise & segment](docs/hld/Chunk%2001%20%C2%B7%20Ingest,%20normalise%20%26%20segment.md) | ✅ | ✅ | ⬜ | ⬜ |
+| [01 Ingest, normalise & segment](docs/chunks/01-ingest/README.md) | ✅ | ✅ | ⬜ | ⬜ |
 | 02 Relevance screen & routing | ⬜ | ⬜ | ⬜ | ⬜ |
 | 03 Cited extraction & gaps | ⬜ | ⬜ | ⬜ | ⬜ |
 | 04 Evaluation harness | ⬜ | ⬜ | ⬜ | ⬜ |
@@ -101,32 +101,24 @@ Question ──► 7 chunks ──► PRD ──► HLD per chunk ──► LLD 
 ```
 cite-or-omit/
 ├── README.md                               ← you are here
-├── LICENSE                                 ← all-rights-reserved proprietary notice; no open-source license
+├── LICENSE                                 ← MIT open-source license
 ├── docs/
 │   ├── prd/
 │   │   ├── PRD.md                          ← product requirements draft
-│   ├── hld/                                ← one HLD per chunk plus supporting notes
-│   │   ├── "Chunk 01 · Ingest, normalise & segment.md"
-│   │   └── "Chunk 01 · Ingest — Architecture & Design Patterns.md"
-│   ├── lld/                                ← one LLD per chunk
-│   │   └── "Chunk 01 · Ingest, normalise & segment — Low-Level Design.md"
-│   ├── decisions/                          ← planned: ADRs and trade-offs
-│   └── voiceover/                          ← spoken walkthroughs
-├── diagrams/
-│   ├── mermaid/                            ← source of truth, renders on GitHub
-│   └── excalidraw/                         ← hand-redrawn versions (.excalidraw + .png)
-├── src/                                    ← application code (stage 4)
-├── eval/                                   ← golden-set format, harness, results
-├── samples/                                ← synthetic policy documents only
-├── .gitignore
-└── .github/                                ← optional repo metadata and automation
+│   ├── chunks/                             ← one complete documentation package per chunk
+│   │   └── 01-ingest/
+│   │       ├── README.md                   ← scope, status and document map
+│   │       ├── hld.md                      ← high-level design
+│   │       ├── patterns.md                 ← patterns and rationale
+│   │       ├── lld.md                      ← low-level design
+│   │       ├── infrastructure.md          ← deployment design
+│   │       └── operations.md               ← planned operations guide
+└── .gitignore
 ```
 
 ---
 
 ## Conventions
-
-**Diagrams.** Every diagram starts as Mermaid in `diagrams/mermaid/`, so it is versioned, diffable and renders on GitHub. It is then redrawn by hand in Excalidraw in `diagrams/excalidraw/`, keeping both the `.excalidraw` source and an exported `.png`. Docs embed the PNG and link the Mermaid source. Both files share a name, for example `03-extraction-flow.mmd` and `03-extraction-flow.excalidraw`.
 
 **Every design doc follows the same shape.**
 1. The one-line claim
@@ -136,11 +128,7 @@ cite-or-omit/
 5. Failure modes and how they're detected
 6. Open questions
 
-**Voice-overs.** Each PRD section has a short spoken script (~60–80 seconds) in `docs/voiceover/`. It explains the section in plain language, with one concrete example, for a listener who has never configured a time-off policy.
-
-**Decisions.** Any non-obvious choice gets an ADR in `docs/decisions/`: context, options, decision, consequences.
-
-**Data.** Only synthetic or public policy text goes in `samples/`. No real customer documents, ever.
+**Source material.** Any future fixtures must be synthetic or public policy text. No real customer documents, ever.
 
 ---
 
@@ -181,22 +169,10 @@ In priority order. When a design choice is ambiguous, these decide it.
 
 ## About
 
-A self-directed deep dive into designing trustworthy LLM systems for regulated, high-consequence domains, where a wrong value lands on someone's pay stub.
+A self-directed documentation deep dive into designing trustworthy LLM systems for regulated, high-consequence domains, where a wrong value lands on someone's pay stub.
 
 The problem is a generic HCM implementation use case. It does not describe any specific vendor's internal systems.
 
 **Author:** Shanoj Kumar V · [shanoj.com](https://shanoj.com) · [github.com/shanojpillai](https://github.com/shanojpillai)
 
-All rights reserved.
-
-Copyright (c) 2026 Shanoj Kumar V.
-
-This repository and all of its contents (documents, diagrams, scripts and
-source code) are provided for viewing and reference only.
-
-This repository is not released under an open-source license and no permission is
-granted to copy, modify, distribute, sublicense or use any part of this
-repository, in whole or in part, for any purpose, commercial or otherwise,
-without prior written permission from the author.
-
-For permission requests, contact the author via github.com/shanojpillai.
+This repository is licensed under the [MIT License](LICENSE).
