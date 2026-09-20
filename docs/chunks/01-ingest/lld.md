@@ -18,7 +18,7 @@ Numbers marked **[EST]** are engineering estimates to confirm with real document
 
 ## Quick navigation
 
-- [Repository home](../../README.md)
+- [Repository home](../../../README.md)
 - [PRD](../../prd/PRD.md)
 - [Chunk 01 HLD](hld.md)
 - [Chunk 01 LLD](#)

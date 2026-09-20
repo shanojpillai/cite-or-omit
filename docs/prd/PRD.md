@@ -24,6 +24,9 @@ Turning customer time-off policy documents into cited, reviewable entitlement re
 - [Chunk 01 · LLD](../chunks/01-ingest/lld.md)
 - [Chunk 01 · Test and evaluation](../chunks/01-ingest/test-and-evaluation.md)
 - [Chunk 01 · CI/CD](../chunks/01-ingest/ci-cd.md)
+- [Chunk 02 documentation](../chunks/02-relevance-screen/README.md)
+- [Chunk 02 · HLD](../chunks/02-relevance-screen/hld.md)
+- [Chunk 02 · Patterns](../chunks/02-relevance-screen/patterns.md)
 
 ## Related design documents
 

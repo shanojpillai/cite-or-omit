@@ -14,6 +14,7 @@ The goal is depth, not coverage. One real-world problem, taken all the way down.
 - [Chunk 01 documentation](docs/chunks/01-ingest/README.md)
 - [Chunk 01 HLD](docs/chunks/01-ingest/hld.md)
 - [Chunk 01 LLD](docs/chunks/01-ingest/lld.md)
+- [Chunk 02 documentation](docs/chunks/02-relevance-screen/README.md)
 
 ---
 
@@ -91,7 +92,7 @@ Question ──► 7 chunks ──► PRD ──► HLD ──► Patterns ─�
 | Chunk | HLD | LLD | Infra | Test / Eval | CI/CD | Code |
 |---|:-:|:-:|:-:|:-:|:-:|:-:|
 | [01 Ingest, normalise & segment](docs/chunks/01-ingest/README.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ⬜ |
-| 02 Relevance screen & routing | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
+| [02 Relevance screen & routing](docs/chunks/02-relevance-screen/README.md) | ✅ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
 | 03 Cited extraction & gaps | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
 | 04 Evaluation harness | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
 | 05 Review & approval workspace | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
