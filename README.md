@@ -17,6 +17,7 @@ The goal is depth, not coverage. One real-world problem, taken all the way down.
 - [Chunk 02 documentation](docs/chunks/02-relevance-screen/README.md)
 
 ---
+<img width="2752" height="1503" alt="Building_Trustworthy_Document_AI" src="https://github.com/user-attachments/assets/4257b8ff-d751-4730-b2df-695f99bbdefd" />
 
 ## The question
 
