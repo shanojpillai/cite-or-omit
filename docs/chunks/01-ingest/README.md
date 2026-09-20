@@ -9,6 +9,8 @@
 | **Upstream** | Consultant upload / review workspace |
 | **Downstream** | Chunk 02: relevance screen & clause routing |
 | **Status** | HLD complete · patterns complete · LLD complete · infrastructure complete · test/evaluation complete · CI/CD complete · code not started |
+<img width="2752" height="1502" alt="Ingest_and_Integrity_Pipeline_Overview" src="https://github.com/user-attachments/assets/50a856fd-3e89-49bc-be06-702dc4ac66cf" />
+[01-Deterministic architecture for precise AI citations](https://notebook.google.com/notebook/dbdfceca-e902-42f0-bb51-04a13b1ff3ba/artifact/246e149b-4746-4f4d-90b2-451b688477a0?utm_source=nlm_web_share&utm_medium=google_oo&utm_campaign=art_share_1&utm_content=&utm_smc=nlm_web_share_google_oo_art_share_1_)
 
 ## Reading order
 
