@@ -1,6 +1,7 @@
 *Product Requirements Document · Services Transformation · Implementation AI*
 
 # Entitlement Extraction Assistant
+<img width="2752" height="1536" alt="AI_Entitlement_Extraction_Workflow_Comparison" src="https://github.com/user-attachments/assets/31668a70-e49c-4e53-9ee0-a7547ca05aa8" />
 
 Turning customer time-off policy documents into cited, reviewable entitlement requirements so implementation consultants validate instead of transcribing.
 
