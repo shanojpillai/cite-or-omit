@@ -11,14 +11,88 @@
 | **Downstream** | Chunk 02 — Relevance screen & routing |
 | **Status** | HLD ✅ · LLD ✅ · Code ⬜ |
 
-## Quick navigation
+## Big Picture
+```mermaid
+flowchart TB
+  classDef actor fill:#E8F1FB,stroke:#1E5A86,color:#17202A
+  classDef step fill:#FFFFFF,stroke:#39434F,color:#17202A
+  classDef gate fill:#FBEDEA,stroke:#9B2C2C,color:#17202A
+  classDef store fill:#E7F3EC,stroke:#236A45,color:#17202A
+  classDef exit fill:#EDEFF2,stroke:#4B5563,color:#17202A
+  classDef out fill:#F7EEDC,stroke:#8A5A12,color:#17202A
 
-- [Repository home](../../README.md)
-- [PRD](../../prd/PRD.md)
-- [Chunk 01 HLD](#)
-- [Architecture and design patterns](patterns.md)
-- [Chunk 01 LLD](lld.md)
+  C["Implementation consultant<br/>uploads the customer's pile<br/>PDF · Word · scans · zip · email · Excel"]
 
+  subgraph IN["1 · Accept"]
+    direction LR
+    S1["① Intake<br/>hash every file · skip duplicates"]
+    S2["② Safety gate<br/>true type · malware · macros · encryption"]
+    S3["③ Unpack containers<br/>zip and email → child documents"]
+    S1 --> S2 --> S3
+  end
+
+  subgraph NORM["2 · Normalise"]
+    direction LR
+    S4["④ One format<br/>Word → PDF · images → pages<br/>Excel → tables with cell anchors"]
+    S5["⑤ Render pages<br/>fixed coordinate space per page"]
+    S6["⑥ Text per page<br/>native layer, else OCR<br/>confidence kept"]
+    S7["⑦ Canonical text + offset map<br/>clean text for models<br/>every char maps back to a box"]
+    S4 --> S5 --> S6 --> S7
+  end
+
+  subgraph STRUCT["3 · Structure"]
+    direction LR
+    S8["⑧ Layout<br/>headings · clauses · lists · tables<br/>reading order · headers and footers"]
+    S9["⑨ Segment by the document's own structure<br/>section path · clauses across pages<br/>tables kept whole"]
+    S10["⑩ Anchor every segment<br/>page · char start/end · line boxes"]
+    S8 --> S9 --> S10
+  end
+
+  subgraph TRUST["4 · Prove"]
+    direction LR
+    G1{"Pages in = pages out<br/>Word text fully covered"}
+    G2{"Every anchor round-trips<br/>to its exact text"}
+    S11["⑪ Flag, don't hide<br/>low OCR · tracked changes<br/>watermark · version pairs"]
+    G1 --> G2 --> S11
+  end
+
+  S12["⑫ Commit one immutable run<br/>then announce document.ready"]
+
+  subgraph STORE["Stores"]
+    O[("Originals<br/>write-once")]
+    A[("Run artefacts<br/>pages · text · layout")]
+    D[("Documents · pages<br/>segments · anchors")]
+  end
+
+  X1["Blocked for security<br/>or needs unlocked copy"]
+  X2["Failed · reason shown<br/>retry or review by hand"]
+
+  NEXT["Chunk 02 · relevance screen<br/>sees one canonical shape"]
+  UI["Review workspace<br/>exact highlight on the source page"]
+
+  C --> S1
+  S3 --> S4
+  S2 -.->|"hostile or locked"| X1
+  S7 --> S8
+  S10 --> G1
+  G1 -.->|"no"| X2
+  G2 -.->|"no"| X2
+  S11 --> S12
+  S2 --> O
+  S7 --> A
+  S12 --> D
+  S12 --> NEXT
+  D --> UI
+  A --> UI
+
+  class C,UI actor
+  class S1,S2,S3,S4,S5,S6,S7,S8,S9,S10,S11,S12 step
+  class G1,G2 gate
+  class O,A,D store
+  class X1,X2 exit
+  class NEXT out
+
+```
 ---
 
 ## 1. Why this chunk exists
