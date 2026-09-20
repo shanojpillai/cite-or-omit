@@ -12,6 +12,19 @@
 <img width="2752" height="1502" alt="Ingest_and_Integrity_Pipeline_Overview" src="https://github.com/user-attachments/assets/50a856fd-3e89-49bc-be06-702dc4ac66cf" />
 [01-Deterministic architecture for precise AI citations](https://notebook.google.com/notebook/dbdfceca-e902-42f0-bb51-04a13b1ff3ba/artifact/246e149b-4746-4f4d-90b2-451b688477a0?utm_source=nlm_web_share&utm_medium=google_oo&utm_campaign=art_share_1&utm_content=&utm_smc=nlm_web_share_google_oo_art_share_1_)
 
+## Audio overview
+
+<iframe
+	src="https://notebook.google.com/notebook/dbdfceca-e902-42f0-bb51-04a13b1ff3ba/artifact/246e149b-4746-4f4d-90b2-451b688477a0?utm_source=nlm_web_share&amp;utm_medium=google_oo&amp;utm_campaign=art_share_1&amp;utm_content=&amp;utm_smc=nlm_web_share_google_oo_art_share_1_"
+	title="Deterministic architecture for precise AI citations"
+	width="100%"
+	height="180"
+	loading="lazy"
+	allow="autoplay; fullscreen">
+</iframe>
+
+If the embedded player is blocked by the host, [open the audio overview in NotebookLM](https://notebook.google.com/notebook/dbdfceca-e902-42f0-bb51-04a13b1ff3ba/artifact/246e149b-4746-4f4d-90b2-451b688477a0?utm_source=nlm_web_share&utm_medium=google_oo&utm_campaign=art_share_1&utm_content=&utm_smc=nlm_web_share_google_oo_art_share_1_).
+
 ## Reading order
 
 1. [High-level design](hld.md): scope, canonical contract, flow, invariants and trade-offs.
