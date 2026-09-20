@@ -100,7 +100,7 @@ Question ──► 7 chunks ──► PRD ──► HLD per chunk ──► LLD 
 ```
 cite-or-omit/
 ├── README.md                               ← you are here
-├── LICENSE                                 ← all-rights-reserved notice
+├── LICENSE                                 ← all-rights-reserved proprietary notice; no open-source license
 ├── docs/
 │   ├── prd/
 │   │   ├── PRD.md                          ← product requirements draft
@@ -185,13 +185,16 @@ The problem is a generic HCM implementation use case. It does not describe any s
 
 **Author:** Shanoj Kumar V · [shanoj.com](https://shanoj.com) · [github.com/shanojpillai](https://github.com/shanojpillai)
 
-Copyright (c) 2026 Shanoj Kumar V. All rights reserved.
+All rights reserved.
+
+Copyright (c) 2026 Shanoj Kumar V.
 
 This repository and all of its contents (documents, diagrams, scripts and
-source code) are published for viewing and reference only.
+source code) are provided for viewing and reference only.
 
-No permission is granted to copy, modify, distribute, sublicense or use any
-part of this repository, in whole or in part, for any purpose, commercial or
-otherwise, without prior written permission from the author.
+This repository is not released under an open-source license and no permission is
+granted to copy, modify, distribute, sublicense or use any part of this
+repository, in whole or in part, for any purpose, commercial or otherwise,
+without prior written permission from the author.
 
 For permission requests, contact the author via github.com/shanojpillai.
