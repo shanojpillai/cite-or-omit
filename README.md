@@ -92,7 +92,7 @@ Question ──► 7 chunks ──► PRD ──► HLD ──► Patterns ─�
 | Chunk | HLD | LLD | Infra | Test / Eval | CI/CD | Code |
 |---|:-:|:-:|:-:|:-:|:-:|:-:|
 | [01 Ingest, normalise & segment](docs/chunks/01-ingest/README.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ⬜ |
-| [02 Relevance screen & routing](docs/chunks/02-relevance-screen/README.md) | ✅ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
+| [02 Relevance screen & routing](docs/chunks/02-relevance-screen/README.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ⬜ |
 | 03 Cited extraction & gaps | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
 | 04 Evaluation harness | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
 | 05 Review & approval workspace | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
