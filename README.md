@@ -7,6 +7,13 @@ An AI system design case study, worked end to end: from an open-ended interview 
 
 The goal is depth, not coverage. One real-world problem, taken all the way down.
 
+## Quick navigation
+
+- [Repository home](#)
+- [PRD](docs/prd/PRD.md)
+- [Chunk 01: Ingest, normalise & segment](docs/prd/Chunk%2001%20%C2%B7%20Ingest,%20normalise%20&%20segment.md)
+- [Chunk 01 LLD](docs/prd/Chunk%2001%20%C2%B7%20Ingest,%20normalise%20&%20segment%20%E2%80%94%20Low-Level%20Design.md)
+
 ---
 
 ## The question

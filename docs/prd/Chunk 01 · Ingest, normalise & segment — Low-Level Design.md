@@ -16,6 +16,13 @@
 
 Numbers marked **[EST]** are engineering estimates to confirm with real documents in phase 0.
 
+## Quick navigation
+
+- [Repository home](../../README.md)
+- [PRD](PRD.md)
+- [Chunk 01 overview](Chunk%2001%20%C2%B7%20Ingest,%20normalise%20&%20segment.md)
+- [Chunk 01 LLD](#)
+
 ---
 ## 1. Re-evaluation of the HLD
 

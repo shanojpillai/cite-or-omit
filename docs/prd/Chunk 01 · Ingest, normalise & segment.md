@@ -11,6 +11,14 @@
 | **Downstream** | Chunk 02 — Relevance screen & routing |
 | **Status** | Deep dive ✅ · HLD diagram ⏳ · LLD ⬜ · Code ⬜ |
 
+## Quick navigation
+
+- [Repository home](../../README.md)
+- [PRD](PRD.md)
+- [Chunk 01 overview](#)
+- [Chunk 01 LLD](Chunk%2001%20%C2%B7%20Ingest,%20normalise%20&%20segment%20%E2%80%94%20Low-Level%20Design.md)
+- [Audio summary](voiceover/01-why-this-chunk-exists.html)
+
 ---
 
 ## 1. Why this chunk exists

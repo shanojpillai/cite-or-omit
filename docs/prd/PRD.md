@@ -15,6 +15,13 @@ Turning customer time-off policy documents into cited, reviewable entitlement re
 
 > **Context.** This is a practice PRD written for system-design preparation. It describes a generic HCM vendor's Services organisation; it is not an official document of any company. Figures tagged `ASSUMPTION` are working hypotheses to validate in discovery before this PRD is approved.
 
+## Quick navigation
+
+- [Repository home](../../README.md)
+- [PRD overview](#)
+- [Chunk 01 · Ingest, normalise & segment](Chunk%2001%20%C2%B7%20Ingest,%20normalise%20&%20segment.md)
+- [Chunk 01 · LLD](Chunk%2001%20%C2%B7%20Ingest,%20normalise%20&%20segment%20%E2%80%94%20Low-Level%20Design.md)
+
 ## Related design documents
 
 This PRD is the parent artifact for the chunk-level implementation design. Use the links below to move from the end-to-end requirements into the detailed design for the first operational slice:
