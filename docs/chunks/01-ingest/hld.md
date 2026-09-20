@@ -1,5 +1,5 @@
 # Chunk 01 · Ingest, normalise & segment
-
+<img width="2816" height="1445" alt="Gemini_Generated_Image_f2670yf2670yf267" src="https://github.com/user-attachments/assets/d07e339b-d3f9-437d-a5a6-a3cb2a20bb17" />
 > **The one-line claim:**
 > *Every citation the system will ever show is only as good as the coordinates this stage records. Ingest turns a messy pile of files into one canonical, ordered, addressable set of clauses — and it never loses a page silently.*
 
