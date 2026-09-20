@@ -16,6 +16,7 @@ Items tagged **[EST]** are estimates. Items tagged **[VERIFY]** are AWS facts I 
 ---
 
 ## 1. The picture
+<img width="2816" height="1536" alt="Gemini_Generated_Image_prd6csprd6csprd6" src="https://github.com/user-attachments/assets/6a77184f-59cd-4f6b-a022-ac98077c862c" />
 
 ```
  [CONSULTANT · React app]
