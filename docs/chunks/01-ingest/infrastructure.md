@@ -1,5 +1,5 @@
 # Chunk 01 · Ingest — AWS Infrastructure Design
-
+<img width="2816" height="1536" alt="Gemini_Generated_Image_a4tjmra4tjmra4tj" src="https://github.com/user-attachments/assets/454c8543-56e7-433c-8d91-22ca371fd935" />
 > **The one-line claim:**
 > *Ingest on AWS is a Step Functions workflow per document. Stateless Lambdas handle the page-parallel work. A sealed Fargate sandbox handles untrusted files. Textract reads the scans. S3 and Aurora hold everything. It ships as its own deployable unit, and talks to the other six chunks only through versioned events and a read API.*
 
