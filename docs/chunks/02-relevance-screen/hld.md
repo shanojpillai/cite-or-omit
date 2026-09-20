@@ -9,7 +9,7 @@
 | **PRD requirements** | FR-SCR-01 → FR-SCR-04 · principle 4 (recall when finding) |
 | **Upstream** | Chunk 01 — ingest, normalise & segment |
 | **Downstream** | Chunk 03 — cited extraction & gap detection |
-| **Status** | HLD ✅ v1.1 · Patterns ✅ · LLD ⬜ · Infra ⬜ · CI/CD ⬜ · Test & eval ⬜ |
+| **Status** | HLD ✅ v1.1 · Patterns ✅ · LLD ✅ · Infrastructure ✅ · Test/evaluation ✅ · CI/CD ✅ · Code ⬜ |
 
 Numbers marked **[EST]** are engineering estimates to confirm against the eval set in phase 0.
 

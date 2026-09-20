@@ -8,7 +8,7 @@
 | **PRD requirements** | [FR-ING-01 to FR-ING-05](../../prd/PRD.md#101-ingest-normalisation--segmentation) |
 | **Upstream** | Consultant upload / review workspace |
 | **Downstream** | Chunk 02: relevance screen & clause routing |
-| **Status** | HLD complete · patterns complete · LLD complete · infrastructure complete |
+| **Status** | HLD complete · patterns complete · LLD complete · infrastructure complete · test/evaluation complete · CI/CD complete · code not started |
 
 ## Reading order
 

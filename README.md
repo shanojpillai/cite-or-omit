@@ -79,12 +79,12 @@ Question ──► 7 chunks ──► PRD ──► HLD ──► Patterns ─�
 |---|---|---|
 | 0 · Question & decomposition | This README, the seven chunks | ✅ Done |
 | 1 · Product requirements | [`docs/prd/`](docs/prd/): PRD draft and chunk requirements | ✅ In progress |
-| 2 · High-level design | [`docs/chunks/`](docs/chunks/): one package per chunk | ✅ Chunk 01 |
-| 3 · Patterns and rationale | [`docs/chunks/`](docs/chunks/): one package per chunk | ✅ Chunk 01 |
-| 4 · Low-level design | [`docs/chunks/`](docs/chunks/): one package per chunk | ✅ Chunk 01 |
-| 5 · Infrastructure | [`docs/chunks/`](docs/chunks/): one package per chunk | ✅ Chunk 01 |
-| 6 · Test and evaluation | [`docs/chunks/`](docs/chunks/): one package per chunk | ✅ Chunk 01 |
-| 7 · CI/CD | [`docs/chunks/`](docs/chunks/): one package per chunk | ✅ Chunk 01 |
+| 2 · High-level design | [`docs/chunks/`](docs/chunks/): one package per chunk | ✅ Chunks 01–02 |
+| 3 · Patterns and rationale | [`docs/chunks/`](docs/chunks/): one package per chunk | ✅ Chunks 01–02 |
+| 4 · Low-level design | [`docs/chunks/`](docs/chunks/): one package per chunk | ✅ Chunks 01–02 |
+| 5 · Infrastructure | [`docs/chunks/`](docs/chunks/): one package per chunk | ✅ Chunks 01–02 |
+| 6 · Test and evaluation | [`docs/chunks/`](docs/chunks/): one package per chunk | ✅ Chunks 01–02 |
+| 7 · CI/CD | [`docs/chunks/`](docs/chunks/): one package per chunk | ✅ Chunks 01–02 |
 | 8 · Implementation | Future phase outside this documentation workspace | ⬜ Not started |
 
 ### Chunk progress

@@ -511,4 +511,4 @@ Note that `year_basis` lands in the Low band. It is supported by text, but only 
 
 ---
 
-*Entitlement Extraction Assistant · PRD v0.4 draft · Practice document for system-design preparation. Next artefacts: high-level design, then a low-level design per pipeline stage.*
+*Entitlement Extraction Assistant · PRD v0.4 draft · Practice document for system-design preparation. Chunk 01 and Chunk 02 documentation packages are complete through CI/CD; implementation remains future work.*

@@ -9,7 +9,7 @@
 | **PRD requirements** | FR-ING-01 → FR-ING-05 |
 | **Upstream** | Consultant upload (review workspace) |
 | **Downstream** | Chunk 02 — Relevance screen & routing |
-| **Status** | HLD ✅ · LLD ✅ · Code ⬜ |
+| **Status** | HLD ✅ · Patterns ✅ · LLD ✅ · Infrastructure ✅ · Test/evaluation ✅ · CI/CD ✅ · Code ⬜ |
 
 ## Big Picture
 ```mermaid

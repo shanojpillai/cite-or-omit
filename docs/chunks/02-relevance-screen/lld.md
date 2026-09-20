@@ -9,7 +9,7 @@
 | **Builds on** | [HLD v1.1](hld.md) · [Patterns](patterns.md) |
 | **Upstream** | Chunk 01 `document.ready/v1` |
 | **Downstream** | Chunk 03 `bundles.ready/v1` |
-| **Status** | LLD ✅ · Infra ⬜ · CI/CD ⬜ · Test & eval ⬜ |
+| **Status** | HLD ✅ · Patterns ✅ · LLD ✅ · Infrastructure ✅ · Test/evaluation ✅ · CI/CD ✅ · Code ⬜ |
 
 **[EST]** = estimate to calibrate in phase 0. **[VERIFY]** = external fact to re-check.
 
